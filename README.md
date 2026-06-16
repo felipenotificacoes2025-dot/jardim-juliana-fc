@@ -6,7 +6,7 @@ Landing page institucional do **Jardim Juliana Futebol Clube**, bairro Jardim Ju
 
 ## Sobre
 
-Site estático (HTML, CSS e JavaScript puro), responsivo e mobile-first, contando a história do bairro e do clube (fundado em 2015), com galeria de fotos da comunidade e da torcida **Febre Azul**.
+Site estático (HTML, CSS e JavaScript puro), responsivo e mobile-first, contando a história do bairro e do clube (origem em 1999 como PC J FC; em 2012 entra no futebol amador e adota o nome Jardim Juliana FC), com galeria de fotos da comunidade e da torcida **Febre Azul**.
 
 ## Estrutura
 
