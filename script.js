@@ -93,7 +93,7 @@
     function addPhotos(upTo) {
       var frag = document.createDocumentFragment();
       for (var i = shown + 1; i <= upTo && i <= total; i++) {
-        var src = 'img/galeria/' + pad(i) + '.jpg';
+        var src = 'img/galeria/' + pad(i) + '.webp';
         var btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'gallery__item';
