@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jardim Juliana FC — Mais que um time, uma família</title>
+  <meta name="description" content="Jardim Juliana Futebol Clube, fundado em 2015, representa o bairro Jardim Juliana, na zona leste de Ribeirão Preto - SP. Mais que um time, uma família. Torcida Febre Azul." />
+  <meta name="author" content="Jardim Juliana FC" />
+  <meta name="theme-color" content="#0A3D91" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jardim Juliana FC — Mais que um time, uma família" />
+  <meta property="og:description" content="Orgulho da zona leste de Ribeirão Preto. Paixão que une gerações. Torcida Febre Azul." />
+  <meta property="og:image" content="img/hero.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" type="image/jpeg" href="img/escudo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <a href="#hero" class="brand" aria-label="Jardim Juliana FC — início">
+      <img src="img/escudo.jpg" alt="Escudo do Jardim Juliana FC" class="brand__logo" />
+      <span class="brand__name">Jardim Juliana <strong>FC</strong></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#historia">História</a>
+      <a href="#clube">O Clube</a>
+      <a href="#febre-azul">Febre Azul</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#participe" class="nav__cta">Quero a camisa</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" style="background-image:url('img/hero.jpg')" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content reveal">
+        <img src="img/escudo.jpg" alt="Escudo do Jardim Juliana FC" class="hero__shield" />
+        <h1 class="hero__title">Jardim Juliana <span>FC</span></h1>
+        <p class="hero__slogan">"Mais que um time, uma família."</p>
+        <span class="hero__since">Desde 2015 · Zona Leste · Ribeirão Preto - SP</span>
+        <a href="#historia" class="hero__scroll" aria-label="Rolar até Nossa História">
+          <span>Nossa História</span>
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 16l-6-6 1.4-1.4L12 13.2l4.6-4.6L18 10z"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 2. NOSSA HISTÓRIA (bairro + clube) ===== -->
+    <section class="section neighborhood" id="historia">
+      <div class="neighborhood__bg" style="background-image:url('img/bairro.jpg')" aria-hidden="true"></div>
+      <div class="neighborhood__overlay" aria-hidden="true"></div>
+
+      <div class="container neighborhood__content reveal">
+        <span class="eyebrow eyebrow--light">Nossa História</span>
+        <h2 class="section__title section__title--light">Jardim Juliana, o coração da zona leste</h2>
+
+        <p>
+          Fundado na década de 1990, o Jardim Juliana é um bairro tradicional da zona leste de Ribeirão Preto,
+          construído a partir do sonho da casa própria e da força de uma comunidade trabalhadora e acolhedora.
+        </p>
+        <p>
+          As primeiras famílias chegaram em <strong>novembro de 1993</strong>, quando as ruas ainda eram de terra
+          e a infraestrutura estava em desenvolvimento. Com união e muito esforço coletivo, os próprios moradores
+          ajudaram a construir não apenas suas casas, mas também a identidade do bairro.
+        </p>
+
+        <blockquote class="neighborhood__quote">
+          Antes ocupado por áreas rurais e cercado pela natureza, o Jardim Juliana cresceu ao lado de importantes
+          marcos da região, mantendo até hoje o espírito de vizinhança, solidariedade e pertencimento.
+        </blockquote>
+
+        <p>
+          No coração do bairro está a <strong>E.M.E.F. “Profª Dercy Célia Seixas Ferrari”</strong> — uma escola amada,
+          fundamental na vida de todos e referência para a região. Por suas salas passaram gerações e gerações de
+          moradores que ali aprenderam, se formaram e se tornaram grandes pessoas, guardando para sempre o carinho por
+          essa escola que ajudou a construir o caráter da comunidade. Mais do que ensinar, ela acolhe — não só o Jardim
+          Juliana, mas também as famílias dos bairros vizinhos, como o <strong>Jardim das Palmeiras I e II</strong>, o
+          <strong>Jardim Helena</strong> e o <strong>Parque dos Servidores</strong>. Aqui, ninguém é de fora: toda a
+          região é parte da mesma família.
+        </p>
+
+        <p>
+          Hoje, o Jardim Juliana é reconhecido pela sua história de luta, pelas raízes culturais, pela valorização
+          da família e pelo orgulho de quem nasceu, cresceu ou escolheu viver aqui — e de toda a vizinhança que
+          caminha junto. Foi para representar essa história que, em <strong>2015</strong>, nasceu o
+          Jardim Juliana Futebol Clube.
+        </p>
+
+        <ol class="timeline timeline--light">
+          <li class="timeline__item">
+            <span class="timeline__year">Anos 1990</span>
+            <p>O bairro nasce na expansão da região da COHAB, tendo a <strong>Rua Amadeu Borelli</strong> como sede e principal rua da comunidade.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__year">Raízes culturais</span>
+            <p>Próximo aos grandes eucaliptos da região, cresceu entre rodas de samba, música e a paixão pelo futebol.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__year">2015</span>
+            <p>Fundação oficial do <strong>Jardim Juliana FC</strong>, unindo moradores, atletas, crianças e torcedores.</p>
+          </li>
+        </ol>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__num">Nov. 1993</span>
+            <span class="stat__label">Primeiras famílias</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">2015</span>
+            <span class="stat__label">Fundação do clube</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">Zona Leste</span>
+            <span class="stat__label">Ribeirão Preto - SP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. O CLUBE ===== -->
+    <section class="section club" id="clube">
+      <div class="container">
+        <div class="club__intro reveal">
+          <span class="eyebrow">Jardim Juliana FC</span>
+          <h2 class="section__title">Mais que um clube, um símbolo de pertencimento</h2>
+          <p>
+            Nossa missão vai além das quatro linhas: usar o futebol para unir gerações, dar orgulho ao bairro
+            e fortalecer a comunidade. Cada jogo é uma celebração da nossa gente e da nossa história.
+          </p>
+        </div>
+
+        <!-- Valores resumidos -->
+        <ul class="club__values-inline" aria-label="Nossos valores">
+          <li>União</li>
+          <li>Respeito</li>
+          <li>Tradição</li>
+          <li>Família</li>
+        </ul>
+
+        <!-- Manifesto / história do clube -->
+        <div class="club__story reveal">
+          <h3 class="club__story-title">Uma história escrita por gerações</h3>
+
+          <p>
+            O Jardim Juliana Futebol Clube nasceu oficialmente em 2015, mas sua essência começou muito antes da
+            criação do time. Ela surgiu nas ruas do bairro, nos encontros entre amigos, nas tardes de futebol
+            improvisado, nas conversas nas calçadas e no sentimento de união que sempre fez parte da comunidade.
+          </p>
+
+          <div class="club__story-more" id="clubStoryMore" hidden>
+            <p>
+              Localizado na zona leste de Ribeirão Preto, o bairro Jardim Juliana foi fundado na década de 1990,
+              durante o crescimento e a expansão da região da COHAB. Desde os seus primeiros anos, a Rua Amadeu Borelli
+              se tornou um dos principais pontos de referência do bairro, sendo palco de histórias, amizades e momentos
+              que marcaram gerações.
+            </p>
+            <p>
+              O Jardim Juliana nasceu do esforço e da determinação de famílias trabalhadoras que, com muita luta,
+              construíram não apenas suas casas, mas também uma comunidade forte, acolhedora e unida. Cada morador
+              ajudou a transformar o bairro em um lugar de pertencimento, respeito e solidariedade.
+            </p>
+            <p>
+              Ao longo dos anos, o bairro desenvolveu uma identidade própria. Entre rodas de samba, música, festas
+              comunitárias, encontros entre vizinhos e o amor pelo esporte, especialmente pelo futebol, formou-se uma
+              cultura rica, vibrante e cheia de histórias para contar.
+            </p>
+            <p>
+              Aqui, o futebol sempre foi muito mais do que um jogo. Foi um ponto de encontro. Um motivo para reunir
+              amigos, fortalecer laços e criar memórias inesquecíveis.
+            </p>
+            <p>
+              Próximo aos grandes eucaliptos que emolduram a região e trazem um toque especial de natureza e
+              tranquilidade, o Jardim Juliana cresceu preservando aquilo que tem de mais valioso: as pessoas.
+            </p>
+            <p>
+              São homens e mulheres que acordam cedo para trabalhar, jovens que sonham com um futuro melhor, crianças
+              que encontram no esporte uma oportunidade de aprendizado e famílias que carregam consigo o orgulho de
+              viver no bairro.
+            </p>
+            <p>
+              Mesmo com o crescimento e a constante expansão da região, o Jardim Juliana mantém viva sua essência
+              comunitária. Novos moradores chegam todos os dias e passam a fazer parte de uma história construída com
+              respeito, amizade e união.
+            </p>
+            <p>
+              Foi dessa essência que nasceu o Jardim Juliana Futebol Clube. Criado oficialmente em 2015, o clube surgiu
+              para representar tudo aquilo que o bairro sempre foi: <strong>garra, humildade, companheirismo e paixão</strong>.
+            </p>
+            <p>
+              Cada treino, cada partida e cada conquista carregam o nome e a história de uma comunidade inteira. O escudo
+              do Jardim Juliana FC simboliza o orgulho de quem nasceu aqui, cresceu aqui ou escolheu este lugar para
+              chamar de lar.
+            </p>
+            <p>
+              Dentro de campo, jogamos para vencer. Fora dele, jogamos para fortalecer amizades, incentivar o esporte,
+              inspirar crianças e manter viva a tradição que une gerações.
+            </p>
+            <p>
+              O Jardim Juliana FC acredita que o futebol é uma ferramenta de transformação social. Ele ensina valores que
+              levamos para a vida: respeito, disciplina, compromisso, superação e trabalho em equipe.
+              <strong>Mais do que formar atletas, queremos formar cidadãos.</strong>
+            </p>
+            <p>
+              Aqui, cada criança que veste nossa camisa carrega um sonho. Cada morador que acompanha nossos jogos faz
+              parte da nossa trajetória. Cada apoiador, parceiro e torcedor ajuda a escrever novos capítulos da nossa
+              história.
+            </p>
+            <p>
+              E é impossível contar a história do Jardim Juliana FC sem mencionar a nossa maior paixão nas arquibancadas:
+              a torcida organizada <strong>Febre Azul</strong> — a voz, a energia e o coração pulsante do nosso clube.
+              É ela que transforma cada jogo em uma celebração, que canta, apoia e incentiva do primeiro ao último minuto.
+              Mais do que torcedores, somos irmãos.
+            </p>
+            <p>
+              No Jardim Juliana FC, acreditamos que ninguém caminha sozinho. Nossa força vem da união, da amizade e do
+              sentimento de pertencimento que atravessa gerações.
+            </p>
+          </div>
+
+          <button type="button" class="btn-more btn-more--ghost" id="clubStoryToggle"
+                  aria-expanded="false" aria-controls="clubStoryMore">Ler a história completa</button>
+
+          <div class="club__creed">
+            <p>Somos filhos do Jardim Juliana.</p>
+            <p>Somos a força da zona leste.</p>
+            <p>Somos a tradição que nasceu na comunidade.</p>
+          </div>
+
+          <p class="club__closing">
+            Seguimos em frente, honrando nossas raízes e construindo um futuro cada vez mais forte para as próximas
+            gerações. Aqui, você não encontra apenas um time de futebol. Você encontra uma família.
+            <strong>Você encontra o Jardim Juliana FC.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. FEBRE AZUL ===== -->
+    <section class="section fan-club" id="febre-azul">
+      <div class="fan-club__bg" style="background-image:url('img/febre-azul.jpg')" aria-hidden="true"></div>
+      <div class="fan-club__overlay" aria-hidden="true"></div>
+
+      <div class="container fan-club__content reveal">
+        <span class="eyebrow eyebrow--light">Torcida Organizada</span>
+        <h2 class="fan-club__title">Febre Azul</h2>
+        <p class="fan-club__quote">"Nas arquibancadas, uma torcida. Na vida, uma família."</p>
+        <p class="fan-club__text">
+          A Febre Azul é a voz e a energia do Jardim Juliana FC. Tambores, cantos e fumaça azul que transformam
+          cada partida em festa e cada arquibancada em casa. É o coração que pulsa pelo clube.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 6. GALERIA ===== -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <div class="gallery__head reveal">
+          <span class="eyebrow">Galeria</span>
+          <h2 class="section__title">Jogos, treinos, torcida e comunidade</h2>
+        </div>
+
+        <div class="gallery__grid" id="galleryGrid" data-count="39" data-initial="12"></div>
+
+        <div class="gallery__more">
+          <button type="button" class="btn-more" id="galleryMore">Ver mais fotos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA: FAÇA PARTE ===== -->
+    <section class="cta" id="participe">
+      <div class="container cta__inner reveal">
+        <span class="eyebrow eyebrow--light">Vista essa paixão</span>
+        <h2 class="cta__title">Garanta a sua camisa do Jardim Juliana FC</h2>
+        <p class="cta__text">
+          Vista o orgulho da zona leste e leve a nossa história com você. Fale direto com a diretoria pelo WhatsApp
+          e garanta a sua camisa — cada apoio ajuda o clube a seguir em campo.
+        </p>
+        <div class="cta__actions">
+          <a class="btn btn--whats" href="https://wa.me/5516992665565?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Jardim%20Juliana%20FC%20e%20gostaria%20de%20comprar%20uma%20camisa.%20%F0%9F%92%99" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-.9-1.1-1.2-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.7.7-.9 1.6-.7 2.5.3 1.2 1 2.3 1.9 3.2 1 1.2 2.3 2.1 3.7 2.6.5.2 1 .3 1.6.3.5 0 1-.2 1.4-.5.4-.3.6-.8.7-1.2.1-.2.1-.4 0-.5z"/></svg>
+            Quero minha camisa
+          </a>
+          <a class="btn btn--insta" href="https://www.instagram.com/jardimjulianajj" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.9A4.9 4.9 0 1 0 16.9 12 4.9 4.9 0 0 0 12 7.1zm0 8.1A3.2 3.2 0 1 1 15.2 12 3.2 3.2 0 0 1 12 15.2zm6.3-8.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/></svg>
+            Seguir no Instagram
+          </a>
+        </div>
+        <p class="cta__note">Atendimento direto com a diretoria do clube.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 7. RODAPÉ ===== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <img src="img/escudo.jpg" alt="Escudo do Jardim Juliana FC" class="footer__logo" />
+      <p class="footer__tagline">"Orgulho da zona leste. Paixão que une gerações."</p>
+
+      <nav class="footer__social" aria-label="Redes sociais e contato">
+        <a href="https://www.instagram.com/jardimjulianajj" target="_blank" aria-label="Instagram do Jardim Juliana FC" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.1 3.3c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-3.3s0-2.1-.1-3.3c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1A4.9 4.9 0 1 1 7.1 12 4.9 4.9 0 0 1 12 7.1zm0 8.1A3.2 3.2 0 1 0 8.8 12 3.2 3.2 0 0 0 12 15.2zm6.3-8.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/></svg>
+        </a>
+        <a href="https://wa.me/5516992665565" target="_blank" aria-label="WhatsApp do Jardim Juliana FC" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-.9-1.1-1.2-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.7.7-.9 1.6-.7 2.5.3 1.2 1 2.3 1.9 3.2 1 1.2 2.3 2.1 3.7 2.6.5.2 1 .3 1.6.3.5 0 1-.2 1.4-.5.4-.3.6-.8.7-1.2.1-.2.1-.4 0-.5z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/1QY9mKLTY9/?mibextid=wwXIfr" target="_blank" aria-label="Facebook do Jardim Juliana FC" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.5v8z"/></svg>
+        </a>
+      </nav>
+
+      <div class="footer__meta">
+        <span>Ribeirão Preto - SP</span>
+        <span aria-hidden="true">•</span>
+        <span>Fundado em 2015</span>
+        <span aria-hidden="true">•</span>
+        <span>Zona Leste</span>
+      </div>
+
+      <p class="footer__copy">© <span id="year"></span> Jardim Juliana Futebol Clube — Febre Azul</p>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a class="whats-float" href="https://wa.me/5516992665565?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Jardim%20Juliana%20FC.%20%F0%9F%92%99"
+     target="_blank" rel="noopener" aria-label="Falar no WhatsApp do Jardim Juliana FC">
+    <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-.9-1.1-1.2-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.7.7-.9 1.6-.7 2.5.3 1.2 1 2.3 1.9 3.2 1 1.2 2.3 2.1 3.7 2.6.5.2 1 .3 1.6.3.5 0 1-.2 1.4-.5.4-.3.6-.8.7-1.2.1-.2.1-.4 0-.5z"/></svg>
+  </a>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Imagem ampliada">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

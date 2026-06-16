@@ -1,0 +1,12 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Fotos originais soltas na raiz (já organizadas em img/ e img/galeria/)
+/*.jpg
+/*.jpeg
+/*.png
+torcida.tambores.febreazul
+
+# Mantém as imagens do site
+!/img/**
