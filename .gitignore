@@ -11,3 +11,4 @@ torcida.tambores.febreazul
 # Mantém as imagens do site
 !/img/**
 /*.webp
+/projetos sociais/
