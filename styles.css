@@ -382,7 +382,12 @@ ol, ul { list-style: none; }
 /* ===================================================================
    5. FEBRE AZUL
 ==================================================================== */
-.fan-club { position: relative; color: var(--branco); text-align: center; overflow: hidden; padding: clamp(4.5rem, 12vw, 8rem) 0; }
+.fan-club {
+  position: relative; color: var(--branco); text-align: center; overflow: hidden;
+  padding: clamp(4.5rem, 12vw, 8rem) 0;
+  min-height: 640px;
+  display: flex; align-items: center;
+}
 .fan-club__bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: -2; transform: scale(1.05); }
 .fan-club__bg--mosaic {
   display: grid;
@@ -390,7 +395,11 @@ ol, ul { list-style: none; }
   grid-template-rows: repeat(2, 1fr);
   transform: none;
 }
-.fan-club__bg--mosaic img { width: 100%; height: 100%; object-fit: cover; }
+.fan-club__bg--mosaic img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;   /* mantém pessoas/fumaça à mostra, cortando menos a parte de cima */
+}
 .fan-club__overlay {
   position: absolute; inset: 0; z-index: -1;
   /* escurece a foto de fundo de forma azulada (apagada), mantendo o texto legível */
