@@ -154,4 +154,76 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
   });
+
+  /* ----- Carrossel do Píter ----- */
+  var carousel = document.getElementById('piterCarousel');
+  if (carousel) {
+    var track = carousel.querySelector('.carousel__track');
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel__slide'));
+    var prevBtn = carousel.querySelector('.carousel__btn--prev');
+    var nextBtn = carousel.querySelector('.carousel__btn--next');
+    var dotsWrap = document.getElementById('piterDots');
+    var index = 0;
+
+    function update() {
+      track.style.transform = 'translateX(' + (-index * 100) + '%)';
+      if (dotsWrap) {
+        Array.prototype.forEach.call(dotsWrap.children, function (d, i) {
+          d.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        });
+      }
+    }
+    function go(i) { index = (i + slides.length) % slides.length; update(); }
+
+    // dots
+    if (dotsWrap) {
+      slides.forEach(function (s, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', 'Foto ' + (i + 1));
+        b.addEventListener('click', function () { go(i); });
+        dotsWrap.appendChild(b);
+      });
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { go(index - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { go(index + 1); });
+
+    // clique para ampliar (lightbox) — ignorado logo após um deslize
+    var suppressClick = false;
+    slides.forEach(function (s) {
+      var img = s.querySelector('img');
+      if (img) img.addEventListener('click', function () {
+        if (suppressClick) return;
+        openLightbox(img.src, img.alt);
+      });
+    });
+
+    // teclado quando o carrossel está focado
+    carousel.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { go(index - 1); }
+      else if (e.key === 'ArrowRight') { go(index + 1); }
+    });
+
+    // deslize (touch) no celular
+    var startX = 0, dx = 0, dragging = false;
+    track.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX; dx = 0; dragging = true;
+    }, { passive: true });
+    track.addEventListener('touchmove', function (e) {
+      if (dragging) dx = e.touches[0].clientX - startX;
+    }, { passive: true });
+    track.addEventListener('touchend', function () {
+      if (!dragging) return;
+      dragging = false;
+      if (Math.abs(dx) > 45) {
+        suppressClick = true;
+        setTimeout(function () { suppressClick = false; }, 350);
+        go(index + (dx < 0 ? 1 : -1));
+      }
+    });
+
+    update();
+  }
 })();

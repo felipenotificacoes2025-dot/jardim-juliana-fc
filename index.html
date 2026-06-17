@@ -171,8 +171,35 @@
     <section class="section legacy" id="piter" aria-labelledby="piter-titulo">
       <div class="container legacy__grid">
         <figure class="legacy__media reveal">
-          <img src="img/piter.webp" alt="Píter, o Rocha Negra, ídolo do Comercial e mestre do Jardim Juliana" loading="lazy" />
-          <figcaption class="legacy__caption">Píter, o “Rocha Negra”.</figcaption>
+          <div class="carousel" id="piterCarousel" aria-roledescription="carrossel" aria-label="Fotos do Píter">
+            <div class="carousel__track">
+              <div class="carousel__slide">
+                <span class="carousel__badge">com Pelé</span>
+                <img src="img/legacy/1.webp" alt="Píter (à direita) ao lado de Pelé em campo, anos 1960" loading="lazy" />
+                <span class="carousel__cap">Píter (à dir.) ao lado de Pelé.</span>
+              </div>
+              <div class="carousel__slide">
+                <span class="carousel__badge">com Pelé</span>
+                <img src="img/legacy/2.webp" alt="Píter reencontra Pelé em evento, anos depois" loading="lazy" />
+                <span class="carousel__cap">O reencontro com Pelé.</span>
+              </div>
+              <div class="carousel__slide">
+                <img src="img/legacy/3.webp" alt="Píter no Comercial e em homenagem, montagem" loading="lazy" />
+                <span class="carousel__cap">Do Comercial à comunidade.</span>
+              </div>
+              <div class="carousel__slide">
+                <img src="img/legacy/4.webp" alt="Retrato de Píter, o Rocha Negra" loading="lazy" />
+                <span class="carousel__cap">Píter, o “Rocha Negra”.</span>
+              </div>
+              <div class="carousel__slide">
+                <img src="img/legacy/5.webp" alt="Píter sempre ligado ao clube" loading="lazy" />
+                <span class="carousel__cap">Sempre ligado ao futebol.</span>
+              </div>
+            </div>
+            <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Foto anterior">&#8249;</button>
+            <button class="carousel__btn carousel__btn--next" type="button" aria-label="Próxima foto">&#8250;</button>
+          </div>
+          <div class="carousel__dots" id="piterDots" role="tablist" aria-label="Selecionar foto"></div>
         </figure>
 
         <div class="legacy__content reveal">
