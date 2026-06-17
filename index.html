@@ -393,12 +393,16 @@
           </article>
 
           <article class="community__card reveal">
-            <div class="community__media">
-              <div class="community__placeholder" role="img" aria-label="Espaço para foto das festas das crianças">
-                <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M12 2a2 2 0 0 0-2 2c0 .5.2 1 .5 1.3L12 7l1.5-1.7c.3-.3.5-.8.5-1.3a2 2 0 0 0-2-2zM4 22l1-9h14l1 9H4zm6.5-9 1.5-3 1.5 3h-3z"/></svg>
-                <small>foto em breve</small>
-              </div>
-            </div>
+            <button class="community__media community__media--album" type="button"
+                    data-album-path="img/comunidade/festas/" data-album-count="27"
+                    data-album-title="Festas para as crianças"
+                    aria-label="Abrir álbum: Festas para as crianças (27 fotos)">
+              <img src="img/comunidade/festas-capa.webp" alt="Festa de Páscoa para as crianças do Jardim Juliana" loading="lazy" />
+              <span class="community__album-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M4 6h12v10H4zM6 4h14v10h-2V6H6z"/></svg>
+                Ver álbum · 27 fotos
+              </span>
+            </button>
             <div class="community__text">
               <h3>Festas para as crianças</h3>
               <p>Todos os anos promovemos festas para a criançada do bairro — brincadeiras, sorrisos e memórias que ficam pra vida toda.</p>
@@ -515,10 +519,13 @@
     <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-.9-1.1-1.2-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.7.7-.9 1.6-.7 2.5.3 1.2 1 2.3 1.9 3.2 1 1.2 2.3 2.1 3.7 2.6.5.2 1 .3 1.6.3.5 0 1-.2 1.4-.5.4-.3.6-.8.7-1.2.1-.2.1-.4 0-.5z"/></svg>
   </a>
 
-  <!-- ===== LIGHTBOX ===== -->
+  <!-- ===== LIGHTBOX / ÁLBUM ===== -->
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Imagem ampliada">
     <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Foto anterior">&#8249;</button>
     <img src="" alt="" id="lightboxImg" />
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Próxima foto">&#8250;</button>
+    <span class="lightbox__counter" id="lightboxCounter" aria-hidden="true"></span>
   </div>
 
   <script src="script.js"></script>

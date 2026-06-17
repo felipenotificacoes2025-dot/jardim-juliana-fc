@@ -117,16 +117,43 @@
     }
   }
 
-  /* ----- Lightbox da galeria ----- */
+  /* ----- Lightbox / Álbum ----- */
   var lightbox = document.getElementById('lightbox');
   var lightboxImg = document.getElementById('lightboxImg');
   var lightboxClose = document.getElementById('lightboxClose');
+  var lightboxPrev = document.getElementById('lightboxPrev');
+  var lightboxNext = document.getElementById('lightboxNext');
+  var lightboxCounter = document.getElementById('lightboxCounter');
   var lastFocused = null;
+  var album = [];
+  var albumIdx = 0;
 
-  function openLightbox(src, alt) {
+  function renderAlbum() {
+    var item = album[albumIdx] || {};
+    lightboxImg.src = item.src || '';
+    lightboxImg.alt = item.alt || '';
+    var multi = album.length > 1;
+    lightboxPrev.hidden = !multi;
+    lightboxNext.hidden = !multi;
+    lightboxCounter.hidden = !multi;
+    if (multi) lightboxCounter.textContent = (albumIdx + 1) + ' / ' + album.length;
+  }
+  function albumGo(i) {
+    if (!album.length) return;
+    albumIdx = (i + album.length) % album.length;
+    renderAlbum();
+  }
+  // openLightbox aceita (src, alt) para 1 imagem OU (arrayDeItens, indiceInicial)
+  function openLightbox(srcOrList, altOrIndex) {
     lastFocused = document.activeElement;
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || '';
+    if (Array.isArray(srcOrList)) {
+      album = srcOrList;
+      albumIdx = altOrIndex || 0;
+    } else {
+      album = [{ src: srcOrList, alt: altOrIndex || '' }];
+      albumIdx = 0;
+    }
+    renderAlbum();
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -136,10 +163,12 @@
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
     lightboxImg.src = '';
+    album = [];
     document.body.style.overflow = '';
     if (lastFocused) lastFocused.focus();
   }
 
+  // abrir foto da galeria (imagem única)
   document.addEventListener('click', function (e) {
     var item = e.target.closest ? e.target.closest('.gallery__item') : null;
     if (!item) return;
@@ -147,12 +176,45 @@
     openLightbox(item.getAttribute('data-src'), img ? img.alt : '');
   });
 
+  // abrir álbum de um projeto da comunidade
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('[data-album-path]') : null;
+    if (!btn) return;
+    var path = btn.getAttribute('data-album-path');
+    var count = parseInt(btn.getAttribute('data-album-count'), 10) || 0;
+    var title = btn.getAttribute('data-album-title') || '';
+    var items = [];
+    for (var i = 1; i <= count; i++) {
+      var nn = i < 10 ? '0' + i : '' + i;
+      items.push({ src: path + nn + '.webp', alt: title + ' — foto ' + i });
+    }
+    if (items.length) openLightbox(items, 0);
+  });
+
   lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', function () { albumGo(albumIdx - 1); });
+  lightboxNext.addEventListener('click', function () { albumGo(albumIdx + 1); });
   lightbox.addEventListener('click', function (e) {
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') albumGo(albumIdx - 1);
+    else if (e.key === 'ArrowRight') albumGo(albumIdx + 1);
+  });
+
+  // deslize (touch) no álbum
+  var lbX = 0, lbDx = 0, lbDrag = false;
+  lightboxImg.addEventListener('touchstart', function (e) {
+    lbX = e.touches[0].clientX; lbDx = 0; lbDrag = true;
+  }, { passive: true });
+  lightboxImg.addEventListener('touchmove', function (e) {
+    if (lbDrag) lbDx = e.touches[0].clientX - lbX;
+  }, { passive: true });
+  lightboxImg.addEventListener('touchend', function () {
+    if (lbDrag && Math.abs(lbDx) > 45) albumGo(albumIdx + (lbDx < 0 ? 1 : -1));
+    lbDrag = false;
   });
 
   /* ----- Carrossel do Píter ----- */
