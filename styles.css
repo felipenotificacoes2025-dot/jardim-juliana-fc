@@ -386,7 +386,8 @@ ol, ul { list-style: none; }
 .fan-club__bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: -2; transform: scale(1.05); }
 .fan-club__overlay {
   position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(11,14,20,.82), rgba(7,35,92,.85));
+  /* escurece a foto de fundo de forma azulada (apagada), mantendo o texto legível */
+  background: linear-gradient(180deg, rgba(7,35,92,.72) 0%, rgba(6,33,76,.80) 100%);
 }
 .fan-club__content { max-width: 760px; }
 .fan-club__title {
