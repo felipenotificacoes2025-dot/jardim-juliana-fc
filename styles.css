@@ -525,6 +525,17 @@ ol, ul { list-style: none; }
   align-items: center;
 }
 
+.legacy__bridge {
+  max-width: 720px;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  padding-inline: var(--pad);
+  text-align: center;
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--azul);
+}
+
 /* Carrossel de fotos */
 .legacy__media { margin: 0; }
 
