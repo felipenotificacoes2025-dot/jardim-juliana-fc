@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jardimjulianafc.com.br/sitemap.xml
