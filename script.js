@@ -80,43 +80,6 @@
     });
   }
 
-  /* ----- Galeria dinâmica (render + "ver mais") ----- */
-  var grid = document.getElementById('galleryGrid');
-  var moreBtn = document.getElementById('galleryMore');
-  if (grid) {
-    var total = parseInt(grid.getAttribute('data-count'), 10) || 0;
-    var initial = parseInt(grid.getAttribute('data-initial'), 10) || 12;
-    var shown = 0;
-
-    function pad(n) { return n < 10 ? '0' + n : '' + n; }
-
-    function addPhotos(upTo) {
-      var frag = document.createDocumentFragment();
-      for (var i = shown + 1; i <= upTo && i <= total; i++) {
-        var src = 'img/galeria/' + pad(i) + '.webp';
-        var btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'gallery__item';
-        btn.setAttribute('data-src', src);
-        var img = document.createElement('img');
-        img.src = src;
-        img.loading = 'lazy';
-        img.alt = 'Jardim Juliana FC — time, torcida e comunidade';
-        btn.appendChild(img);
-        frag.appendChild(btn);
-      }
-      grid.appendChild(frag);
-      shown = Math.min(upTo, total);
-      if (shown >= total && moreBtn) moreBtn.style.display = 'none';
-    }
-
-    addPhotos(initial);
-    if (moreBtn) {
-      if (total <= initial) moreBtn.style.display = 'none';
-      moreBtn.addEventListener('click', function () { addPhotos(total); });
-    }
-  }
-
   /* ----- Lightbox / Álbum ----- */
   var lightbox = document.getElementById('lightbox');
   var lightboxImg = document.getElementById('lightboxImg');
@@ -167,14 +130,6 @@
     document.body.style.overflow = '';
     if (lastFocused) lastFocused.focus();
   }
-
-  // abrir foto da galeria (imagem única)
-  document.addEventListener('click', function (e) {
-    var item = e.target.closest ? e.target.closest('.gallery__item') : null;
-    if (!item) return;
-    var img = item.querySelector('img');
-    openLightbox(item.getAttribute('data-src'), img ? img.alt : '');
-  });
 
   // abrir álbum de um projeto da comunidade
   document.addEventListener('click', function (e) {
