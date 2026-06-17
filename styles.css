@@ -202,6 +202,14 @@ ol, ul { list-style: none; }
   margin: 1rem 0 .6rem;
   color: var(--gelo);
 }
+.hero__tagline {
+  font-size: clamp(.92rem, 2.6vw, 1.1rem);
+  font-weight: 500;
+  color: var(--celeste-claro);
+  max-width: 30rem;
+  margin: 0 auto 1.1rem;
+  line-height: 1.4;
+}
 .hero__since {
   display: inline-block;
   font-size: .8rem;
@@ -378,6 +386,17 @@ ol, ul { list-style: none; }
   color: var(--grafite) !important;
 }
 .club__closing strong { color: var(--azul); font-style: normal; }
+
+.club__cta { margin-top: 2.4rem; text-align: center; }
+.club__cta-text {
+  font-weight: 600;
+  color: var(--azul);
+  margin-bottom: 1.1rem;
+  font-size: 1.05rem;
+}
+.club__cta-actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
+.btn--azul { background: var(--azul); color: var(--branco); }
+.btn--azul:hover { background: var(--celeste); }
 
 /* ===================================================================
    5. FEBRE AZUL
